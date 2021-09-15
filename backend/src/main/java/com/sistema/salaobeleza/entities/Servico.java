@@ -32,15 +32,16 @@ public class Servico {
 	private Cliente cliente;
 	
 	public Servico() {
+		this.setData(LocalDateTime.now());
 	}
 
-	public Servico(Long id, String titulo, String descricao, Double valor, LocalDateTime data, Cliente cliente) {
+	public Servico(Long id, String titulo, String descricao, Double valor, Cliente cliente) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
 		this.descricao = descricao;
 		this.valor = valor;
-		this.data = data;
+		this.setData(LocalDateTime.now());
 		this.cliente = cliente;
 	}
 

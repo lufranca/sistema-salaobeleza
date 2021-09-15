@@ -21,16 +21,14 @@ public class Cliente {
 	private String nome;
 	
 	@OneToMany(mappedBy = "cliente")
-	private List<Servico> servicos = new ArrayList<>();
+	private List<Servico> list = new ArrayList<>();
 	
 	public Cliente() {
 	}
 
-	public Cliente(Long id, String nome, List<Servico> servicos) {
-		super();
+	public Cliente(Long id, String nome) {
 		this.id = id;
 		this.nome = nome;
-		this.servicos = servicos;
 	}
 
 	public Long getId() {
@@ -50,11 +48,11 @@ public class Cliente {
 	}
 
 	public List<Servico> getServicos() {
-		return servicos;
+		return list;
 	}
 
-	public void setServicos(List<Servico> servicos) {
-		this.servicos = servicos;
+	public void setServicos(List<Servico> list) {
+		this.list = list;
 	}
 
 	@Override
