@@ -42,5 +42,4 @@ public class SalaobelezaApplication implements CommandLineRunner{
 		clienteRepository.saveAll(Arrays.asList(c1, c2));
 		servicoRepository.saveAll(Arrays.asList(s1, s2, s3, s4));
 	}
-
 }
